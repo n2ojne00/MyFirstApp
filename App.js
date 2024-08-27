@@ -1,24 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import logo from './assets/favicon.png';
 import UserInfo from './components/userInfo';
 
 export default function App() {
 
-  function buttonPressed() {
-    console.log("button pressed");
-  }
-
-
+    function inputText(text){
+      console.log(text)
+    }
+  
   return (
     <View style={styles.container}>
       <Image source={logo}/>
       <Text>Toimiiko</Text>
 
-      <Button title ='PRESS HERE' onPress={buttonPressed}/>
 
+      <Button title ='PRESS HERE' onPress={() => console.log("button pressed")}/>
+
+        <TextInput 
+        style={
+          {borderWidth: 1, width: 100, padding: 5}}
+          onChangeText={inputText}
+        />
       <UserInfo fname={'Netta'} lname={'Ojala'}/>
-      <UserInfo fname={'Ukko'} lname={'Pekka'}/>
       
      
     </View>
