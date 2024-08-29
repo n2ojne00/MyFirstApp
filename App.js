@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image, Pressable, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, Image, Pressable,  StyleSheet, Text, TextInput, View } from 'react-native';
 import logo from './assets/favicon.png';
 import UserInfo from './components/userInfo';
 import { useState } from 'react';
