@@ -3,6 +3,8 @@ import { Button, Image, Pressable, StyleSheet, Text, TextInput, View } from 'rea
 import logo from './assets/favicon.png';
 import UserInfo from './components/userInfo';
 import { useState } from 'react';
+import SetSkill from './components/slider';
+
 
 export default function App() {
 
@@ -36,6 +38,7 @@ export default function App() {
 
       <UserInfo fname={'Netta'} lname={'Ojala'}/>
       
+      <SetSkill/>
      
     </View>
   );
