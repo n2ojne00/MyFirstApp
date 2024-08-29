@@ -36,9 +36,12 @@ export default function App() {
         />
         <Text>{name}</Text>
 
+        
+
       <UserInfo fname={'Netta'} lname={'Ojala'}/>
       
       <SetSkill/>
+      
      
     </View>
   );
