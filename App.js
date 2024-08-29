@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, Image, Pressable, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
 import logo from './assets/favicon.png';
 import UserInfo from './components/userInfo';
 import { useState } from 'react';
@@ -18,6 +18,7 @@ export default function App() {
     }
   
   return (
+    
     <View style={styles.container}>
 
       <Pressable onPress={() => console.log("Logo pressed")} style={{borderWidth: 2, borderColor: "#fd23dd", borderRadius: 30}}>
@@ -29,21 +30,21 @@ export default function App() {
       color={"#7e80fd"}/>
         <TextInput 
         style={
-          {borderWidth: 1, width: 100, padding: 5}}
+          {borderWidth: 1, width: 200, padding: 5}}
           onChangeText={inputText} //<-- can change inputText as setName
           //value={name} //Checks set value on name
           //keyboardType='decimal-pad'  you'll get numberpad
         />
         <Text>{name}</Text>
 
-        
+        <SetSkill/>
 
       <UserInfo fname={'Netta'} lname={'Ojala'}/>
       
-      <SetSkill/>
-      
+    
      
     </View>
+  
   );
 }
 
@@ -57,3 +58,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+

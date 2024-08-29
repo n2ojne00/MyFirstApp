@@ -14,11 +14,11 @@ export default function SetSkill() {
     const [values, setValues] = useState(new Array(SKILLS.length).fill(0));
     const [average, setAverage] = useState(0);
 
-    const setSkillValue = (val, i) => {  // Arrow function
-        let skillValues = [...values];   // Assuming values is defined elsewhere
-        skillValues[i] = val;            // Sets the value at the index i
-        setValues(skillValues);          // Calls the function to update the values
-    };                                   // Semicolon ends the statement here
+    const setSkillValue = (val, i) => { 
+        let skillValues = [...values];  
+        skillValues[i] = val;            
+        setValues(skillValues);          
+    };                                   
     
 
     //calculates Average of the skills, function reduce() is used here for calculating the sum.
@@ -36,13 +36,13 @@ export default function SetSkill() {
 
     for (let i = 0; i < SKILLS.length; i++) {
         items.push(
-            <View key={"item" + i} style={styles.skills}>
-                <Text style={styles.skill}>{SKILLS[i]}</Text>
-                <Text style={styles.value}>Skill: {values[i]}</Text>
-                <Grid style={styles.grid}>
+            <View key={"item" + i} style={sliderstyles.skills}>
+                <Text style={sliderstyles.skill}>{SKILLS[i]}</Text>
+                <Text style={sliderstyles.value}>Skill: {values[i]}</Text>
+                <Grid style={sliderstyles.grid}>
                     <Col size={5}><Text>{MIN}</Text></Col>
                     <Col size={90}>
-                    <Slider style={styles.slider}
+                    <Slider style={sliderstyles.slider}
                     minimumValue={MIN}
                     maximumValue={MAX}
                     step={1}
@@ -60,24 +60,22 @@ export default function SetSkill() {
     }
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={sliderstyles.stylebox}>
             <ScrollView>
-                <Text style={styles.header}>Skill set</Text>
+                <Text style={sliderstyles.header}>Skill set</Text>
                 <View>{items}</View>
-                <Text style={styles.averageHeader}>Average</Text>
-                <Text style={styles.averageValue}>{average}</Text>
+                <Text style={sliderstyles.averageHeader}>Average</Text>
+                <Text style={sliderstyles.averageValue}>{average}</Text>
             </ScrollView>
-        </SafeAreaView>
+        </SafeAreaView> //rendeding content within the sade area boundaries of a devi
         
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
+const sliderstyles = StyleSheet.create({
+    stylebox: {
         flex: 1,
         backgroundColor: '#fff',
-        justifyContent: 'center',
-        marginTop: 40
     },
     skills: {
         alignItems: 'center'
@@ -117,8 +115,7 @@ const styles = StyleSheet.create({
     },
     averageValue: {
         textAlign: 'center',
-        marginTop: 10,
         fontSize: 40
     }
 
-})
+});
