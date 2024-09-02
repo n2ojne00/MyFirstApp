@@ -35,9 +35,9 @@ export default function App() {
           //value={name} //Checks set value on name
           //keyboardType='decimal-pad'  you'll get numberpad
         />
-        <Text>{name}</Text>
+      <Text>{name}</Text>
 
-        <SetSkill/>
+      <SetSkill/> 
 
       <UserInfo fname={'Netta'} lname={'Ojala'}/>
       
@@ -47,7 +47,6 @@ export default function App() {
   
   );
 }
-
 
 
 const styles = StyleSheet.create({
