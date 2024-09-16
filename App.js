@@ -1,10 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { Button, Image, Pressable,  ScrollView,  StyleSheet, Text, TextInput, View } from 'react-native';
 import logo from './assets/favicon.png';
 import UserInfo from './components/userInfo';
-import { useState } from 'react';
-import SetSkill from './components/slider';
 import DataList from './components/flatlist';
+import TypeText from './components/typehere';
 
 
 export default function App() {
@@ -21,7 +20,7 @@ export default function App() {
       <TypeText/>
       
       <UserInfo fname={'Netta'} lname={'Ojala'}/>
-      
+      <DataList/>
     
       </ScrollView>
     </View>
