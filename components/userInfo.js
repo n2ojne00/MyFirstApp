@@ -5,7 +5,6 @@ export default function UserInfo ( {fname, lname}) {
       <View>
         <Text>{fname}</Text>
         <Text>{lname}</Text>
-        <Button title='Accept user info'/>
       </View>
     )
   }
