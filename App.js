@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image, Pressable,  StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, Image, Pressable,  ScrollView,  StyleSheet, Text, TextInput, View } from 'react-native';
 import logo from './assets/favicon.png';
 import UserInfo from './components/userInfo';
 import { useState } from 'react';
 import SetSkill from './components/slider';
+import DataList from './components/flatlist';
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
   return (
     
     <View style={styles.container}>
+      <ScrollView>
 
       <Pressable onPress={() => console.log("Logo pressed")} style={{borderWidth: 2, borderColor: "#fd23dd", borderRadius: 30}}>
       <Image source={logo}/>
@@ -39,10 +41,12 @@ export default function App() {
 
       <SetSkill/> 
 
-      <UserInfo fname={'Netta'} lname={'Ojala'}/>
+     {// <UserInfo fname={'Netta'} lname={'Ojala'}/>
+     }
+      <DataList/>
       
     
-     
+      </ScrollView>
     </View>
   
   );
