@@ -89,7 +89,7 @@ const sliderstyles = StyleSheet.create({
     grid: {
         marginLeft: 20,
         marginRight: 20,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     skill: {
         marginTop: 10,
