@@ -14,20 +14,19 @@ export default function App() {
 
     <View style={styles.container}>
       
-        <ScrollView>
-
+        
           <Pressable onPress={() => console.log("Logo pressed")} style={{ borderWidth: 2, borderColor: "#fd23dd", borderRadius: 50 }}>
             <Image source={logo} />
           </Pressable>
-
-          {//<TypeText/> 
-          }
-
+         
+         <TypeText/>
+       
+     
+ 
           <UserInfo fname={'Netta'} lname={'Ojala'} />
           <DataList />
-
-
-        </ScrollView>
+           
+      
         <BotNavi/>
     </View>
 
@@ -37,9 +36,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
+    
     backgroundColor: '#fff',
     justifyContent: 'center',
+    flex: 1
   },
 });
 
